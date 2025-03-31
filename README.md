@@ -2,6 +2,20 @@
 
 This is a prototype of a machine-learning-based API service that can classify load tiers of a dataset request. This demo is submitted to ECMWF Code4Earth as part of the proposal to the [Challenge 20](https://github.com/ECMWFCode4Earth/Challenges_2025/issues/12) - DSS MLCosting for requests.
 
+## Table of Contents
+- [Overview](#overview)
+- [Quick Start](#quick-start)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+- [Usage](#usage)
+    - [Starting the API server](#starting-the-api-server)
+    - [API Endpoints](#api-endpoints)
+- [Project Structure](#project-structure)
+- [Development](#development)
+    - [Adding New Dataset Models](#adding-new-dataset-models)
+    - [Adding New ML Models](#adding-new-ml-models)
+- [Dependencies](#dependencies)
+
 ## Overview
 
 MLCosting is a Python application that provides API endpoints to:
@@ -20,7 +34,7 @@ The project currently supports [ERA5 reanalysis pressure level datasets](https:/
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/mlcosting.git
+   git clone https://github.com/thinhngo-x/mlcosting.git
    cd mlcosting
    ```
 
@@ -37,6 +51,24 @@ The project currently supports [ERA5 reanalysis pressure level datasets](https:/
    uv run fastapi dev
    ```
 5. Access the API documentation at `http://localhost:8000/docs` to consult and try out available endpoints.
+
+## Current Status
+### What it has
+- A FastAPI application with endpoints for transforming requests and classifying them
+- A sample dataset (ERA5 reanalysis pressure levels) with a corresponding JSON schema
+- A classifier using XGBoost for the sample dataset
+- A Pydantic model for data validation and transformation
+- A simple one-hot encoding preprocessing step for the input data
+- A basic structure for adding new datasets and classifiers
+### What it lacks
+- A comprehensive set of datasets and classifiers
+- A robust data preprocessing and feature engineering pipeline
+- A training pipeline for the classifiers
+- Pre-trained models for the classifiers ([xgboost](https://xgboost.readthedocs.io/en/release_3.0.0/), [tabpfn](https://github.com/PriorLabs/TabPFN), etc.)
+- A detailed documentation for developers and users
+- A testing suite for the API and classifiers
+- A deployment strategy for production use
+- A monitoring and logging system for the API
 
 ## Usage
 
