@@ -31,7 +31,7 @@ A quick guide for the development team.
 3. **Keep updated:**
    ```bash
    git fetch origin
-   git rebase origin/main
+   git rebase origin/master
    ```
 
 4. **Submit PR** when ready
