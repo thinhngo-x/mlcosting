@@ -44,7 +44,7 @@ The project currently supports [ERA5 reanalysis pressure level datasets](https:/
    ```
 3. Install the required packages:
    ```
-   uv sync
+   uv sync --locked --no-dev
    ```
 4. Launch the FastAPI server in dev mode:
    ```
